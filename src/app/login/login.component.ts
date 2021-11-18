@@ -12,4 +12,12 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  loginUser(event: any) {
+    event.preventDefault()
+    const target = event.target
+    const username = target.querySelector('#username').value
+    const password = target.querySelector('#password').value
+    console.log(username, password)
+  }
+
 }
